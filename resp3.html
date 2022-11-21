@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 3</title>
+  </head>
+  <body>
+    <h1>Formas de pagamento</h1>
+    <p>
+      Elaborar um programa para uma loja, o qual leia o preço de um produto e
+      informe as opções de pagamento da loja. Calcule e informe o valor para
+      pagamento à vista com 10% de descoto e o valor em 3x.
+    </p>
+
+    <script>
+      //Entrada: ler o preço do produto;
+      var preco = Number(prompt('Valor do produto R$: '));
+      //Processamento: calcular valor à vista e dividio em 3x;
+      var aVista = preco - preco * 0.1;
+      var aPrazo = preco / 3;
+      //Saída: exibir valor a vista e valor a prazo
+      alert(
+        'À vista R$: ' +
+          aVista.toFixed(2) +
+          '\nOu 3x de R$: ' +
+          aPrazo.toFixed(2)
+      );
+    </script>
+  </body>
+</html>

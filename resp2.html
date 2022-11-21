@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 2</title>
+  </head>
+  <body>
+    <h1>Valor a ser pago.</h1>
+    <p>
+      Elaborar um programa para uma pizzaria, o qual leia o valor total de uma
+      conta e quantos clientes vão paga-la. Calcule e informe o valor a ser pago
+      por cliente.
+    </p>
+
+    <script>
+      //Entrada: ler valor total da conta e quantos pagantes
+      var total = Number(prompt('Valor da conta R$: '));
+      var clientes = Number(prompt('Nº de pagantes: '));
+      //Processamento: calcular o valor por pessoa
+      var totalCliente = total / clientes;
+      //Saída: exibir valor por cliente
+      alert('Valor por cliente R$: ' + totalCliente.toFixed(2));
+    </script>
+  </body>
+</html>
