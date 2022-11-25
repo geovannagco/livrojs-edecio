@@ -14,8 +14,11 @@ function calcularPeso() {
   var outros = rbOutros.checked;
   var altura = Number(inAltura.value);
 
-  //verifica se o nome foi preenchido e se o gênero foi selecionado
-  if (nome == '' || (masculino == false && feminino == false)) {
+  //verifica se o nome foi preenchido e se o gênero foi selecionado através de operadores lógicos 'true' e 'false'
+  if (
+    nome == '' ||
+    (masculino == false && feminino == false && outros == false)
+  ) {
     alert('Por favor, informe o nome e selecione o gênero...');
     inNome.focus(); //posiciona (joga foco) no campo de edição inNome
     return;
