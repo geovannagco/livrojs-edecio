@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo 3</title>
+  </head>
+  <body>
+    <script>
+      var bairro = prompt('Bairro de Entrega: ');
+      var taxaEntrega;
+      switch (
+        bairro /* o comando switch inicia pela definição da varíavel que escolhe a condição a ser executada*/
+      ) {
+        case 'Centro' /* cada instrução 'case' deve conter um valor de comparação (seguida pelos ':')*/:
+          taxaEntrega = 5.0;
+          break; /*os comandos devem ser finalizados por 'break'*/
+        case 'Fragata':
+        case 'três vendas':
+          taxaEntrega = 7.0;
+          break;
+        case 'Laranjal':
+          taxaEntrega = 10.0;
+          break;
+        default: /*caso o conteúdo seja diferente, o fluxo do programa direciona para a execução dos comandos inseridos na instrução default*/
+          taxaEntrega = 8.0;
+      }
+
+      alert('Taxa R$: ' + taxaEntrega.toFixed(2));
+    </script>
+  </body>
+</html>
