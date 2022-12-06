@@ -21,8 +21,30 @@ function Depositar() {
       var troco = valor - 1;
       outTempo.textContent = 'Tempo: 30min,';
       outTroco.textContent = 'Troco R$: ' + troco.toFixed(2);
-    } 
+    }
   }
 
-  if (valor == 1)
+  if (valor == 1.75 || valor < 3) {
+    if (valor == 1.75) {
+      outTempo.textContent = 'Tempo: 60 min.';
+    } else if (valor > 1.75 || valor < 3) {
+      var troco = valor - 1.75;
+      outTempo.textContent = 'Tempo: 60 min.';
+      outTroco.textContent = 'Troco R$: ' + troco.toFixed(2);
+    }
+  }
+
+  if (valor == 3 || valor > 3) {
+    if (valor == 3) {
+      outTempo.textContent = 'Tempo: 120 min.';
+    } else if (valor > 3) {
+      var troco = valor - 3;
+      outTempo.textContent = 'Tempo: 120 min.';
+      outTroco.textContent = 'Troco R$: ' + troco.toFixed(2);
+    }
+  }
 }
+
+var btConfirmar = document.getElementById('btConfirmar');
+
+btConfirmar.addEventListener('click', Depositar);
