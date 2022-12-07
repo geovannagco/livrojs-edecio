@@ -8,6 +8,13 @@ img.alta {
   height: 420px;
   width: 300px;
 }
+
+img.esq {
+  float: right;
+  height: 300px;
+  width: 300px;
+}
+
 h1 {
   border-bottom-style: inset;
 }
